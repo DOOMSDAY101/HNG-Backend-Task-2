@@ -1,5 +1,5 @@
 const request = require('supertest');
-const { app } = require('../index')
+const app = require('../index')
 const { Client } = require('pg');
 require('dotenv').config();
 
