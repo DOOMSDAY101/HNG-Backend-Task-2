@@ -1,7 +1,8 @@
+require('dotenv').config()
 const db = require('../config/database')
 
 const createTables = async () => {
-    await db.query(`
+  await db.query(`
         CREATE TABLE IF NOT EXISTS users (
         userId VARCHAR(255) PRIMARY KEY,
         firstName VARCHAR(255) NOT NULL,
@@ -12,7 +13,7 @@ const createTables = async () => {
     );
     `);
 
-    await db.query(`
+  await db.query(`
         CREATE TABLE IF NOT EXISTS organisations (
           orgId VARCHAR(255) PRIMARY KEY,
           name VARCHAR(255) NOT NULL,
@@ -20,7 +21,7 @@ const createTables = async () => {
         );
       `);
 
-    await db.query(`
+  await db.query(`
         CREATE TABLE IF NOT EXISTS user_organisations (
           userId VARCHAR(255) REFERENCES users(userId),
           orgId VARCHAR(255) REFERENCES organisations(orgId),
@@ -29,6 +30,6 @@ const createTables = async () => {
       `);
 }
 
-createTables().then(()=>{
-    console.log('Tables created successfully')
+createTables().then(() => {
+  console.log('Tables created successfully')
 }).catch((err) => console.error('Error creating tables:', err))
