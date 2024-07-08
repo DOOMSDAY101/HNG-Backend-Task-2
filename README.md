@@ -217,8 +217,6 @@ Request body: request body must be validated
  }
 ```
 
-live site: https://hng-backend-task-2.vercel.app/
-
 Unsuccessful response:
 
 ```json
@@ -270,3 +268,5 @@ Test Scenarios:
 - Verify the response contains a status code of 422 and appropriate error messages.
 - It Should Fail if there’s Duplicate Email or UserID:Attempt to register two users with the same email.
 - Verify the response contains a status code of 422 and appropriate error messages.
+
+- live site: https://hng-backend-task-2.vercel.app/
