@@ -217,6 +217,8 @@ Request body: request body must be validated
  }
 ```
 
+live site: https://hng-backend-task-2.vercel.app/
+
 Unsuccessful response:
 
 ```json
